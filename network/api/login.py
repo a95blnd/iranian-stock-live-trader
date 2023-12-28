@@ -45,8 +45,17 @@ def send_login(
         if response.status_code == 200:
             new_user = UserModel(username=username, password=password, cookie=response.cookies.get_dict(), token=response.json()['response']['data']['tokenInfo']['token'])
             new_user.save()
-            return response.json()  # Return JSON response if successful
-        else:
-            return f"Request failed with status code: {response.status_code}"
+        return response
     except requests.RequestException as e:
-        return f"Request failed: {str(e)}"
+        raise Exception(e)
+
+
+def get_profile(token:str, cookie:json):
+    url = "https://armoon-delta.tsetab.ir/api/Customers/GetProfile"
+
+    headers = {
+        "Authorization":token,
+        "Cookie":"; ".join([f"{key}={value}" for key, value in cookie.items()])
+    }
+    response = requests.get(url, headers=headers)
+    return response

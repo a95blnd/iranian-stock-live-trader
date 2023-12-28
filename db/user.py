@@ -83,8 +83,7 @@ class UserModel:
         conn, cursor = self._connect()
         cursor.execute('DELETE FROM users WHERE username = ?', (self.username,))
         self._close(conn)
-
-
+        
 
 # Get all users
 # all_users = UserModel.get_all_users()
