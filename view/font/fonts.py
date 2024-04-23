@@ -1,12 +1,14 @@
+# -*- coding: UTF-8 -*-
+
 import pathlib
 
 import customtkinter as ctk
 
 fonts_path = pathlib.Path(__file__).parent
-ctk.FontManager.load_font(str(fonts_path.joinpath("poppins_medium.ttf")))
+ctk.FontManager.load_font(str(fonts_path.joinpath("BNaznnBd.ttf")))
 
 
-def get_font(family="Trebuchet MS", size=14, weight="normal", slant="roman", underline=False):
+def get_font(family="B Nazanin", size=14, weight="normal", slant="roman", underline=False):
     """
     Gets a font object with the given parameters. This is a wrapper for ctk.CTkFont. Provides
     defaults for app theme fonts.

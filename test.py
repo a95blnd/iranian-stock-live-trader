@@ -1,9 +1,3 @@
-from network.api.instrument_data import update_contract_info
-from services.instrument_data import extract_instrument_ids
+from db.instrument_info import InstrumentInfoModel
 
-
-
-list_ids = extract_instrument_ids()
-for index, id in enumerate(list_ids):
-    update_contract_info(id)
-    print(index, id)
+print(InstrumentInfoModel.get_instrument_by_id("IRO9AGAH0441").lVal18AFC)

@@ -27,8 +27,62 @@ def send_start_watchlist(token:str, cookie:json, connection_id:str):
     }
     payloads = {
         "ConnectionId":connection_id,
-        "InstrumentIds":[
-            "IRO9ZOBI2781","IROFZOBI3781","IRO9ZOBI2791","IROFZOBI3791","IRO9ZOBI2801","IROFZOBI3801","IRO9ZOBI2811","IROFZOBI3811","IRO9ZOBI2821","IROFZOBI3821","IRO9ZOBI2831","IROFZOBI3831","IRO9ZOBI2841","IROFZOBI3841","IRO9ZOBI2851","IROFZOBI3851","IRO9ZOBI2861","IROFZOBI3861","IRO9ZOBI2871","IROFZOBI3871","IRO9ZOBI2881","IROFZOBI3881","IRO9ZOBI4011","IROFZOBI5011","IRO9ZOBI4021","IROFZOBI5021"
+        # "InstrumentIds":[
+        #     "IRO1IKCO0001",
+        #     "IRO9IKCO2761",
+        #     "IROFIKCO3761",
+        # ]
+        # "InstrumentIds":[
+        #     'IRO9SIPA6651',
+        #     'IRO9SIPA6661',
+        #     'IRO9SIPA6671',
+        #     'IROAPKOD2441',
+        #     'IROAPKOD2001',
+        #     'IROAPKOD2011',
+        #     'IRO9AHRM6541',
+        #     'IRO9AHRM6551',
+        #     'IRO9AHRM6561',
+        #     'IROATVAF0091',
+        #     'IROATVAF0111',
+        #     'IROATVAF0131',
+        # ]
+        "InstrumentIds": [
+            "IRO9TAMN8371",
+            "IRO9TAMN8381",
+            "IRO9TAMN8391",
+            "IRO9TAMN8261",
+            "IRO9TAMN8271",
+            "IRO9TAMN8281",
+            "IRO9IKCO20O1",
+            "IRO9IKCO20P1",
+            "IRO9IKCO20Q1",
+            "IROATVAF0091",
+            "IROATVAF0111",
+            "IROATVAF0131",
+            "IRO9AHRM6961",
+            "IRO9AHRM6971",
+            "IRO9AHRM6981",
+            "IRO9AHRM6561",
+            "IRO9AHRM6571",
+            "IRO9AHRM6581",
+            "IRO9AHRM6541",
+            "IRO9AHRM6551",
+            "IRO9AHRM6561",
+            "IRO9SIPA6651",
+            "IRO9SIPA6661",
+            "IRO9SIPA6671",
+            "IRO9SIPA6641",
+            "IRO9SIPA6651",
+            "IRO9SIPA6661",
+            "IRO9SIPA6631",
+            "IRO9SIPA6641",
+            "IRO9SIPA6651",
+            "IROABSMZ2301",
+            "IROABSMZ2311",
+            "IROABSMZ2321",
+            "IROAMOJF0151",
+            "IROAMOJF0161",
+            "IROAMOJF0171",
         ]
     }
     response = requests.post(url, headers=headers, data=json.dumps(payloads))

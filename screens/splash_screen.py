@@ -4,6 +4,7 @@ import customtkinter
 import threading
 from network.api.login import get_profile
 from db.user import UserModel
+from db.instrument_info import InstrumentInfoModel
 from screens.dashboard_screen import DashboardScreen
 from screens.login_screen import LoginScreen
 
@@ -13,6 +14,8 @@ class SplashScreen:
         self.app = app
         self.app.main_container = customtkinter.CTkFrame(self.app, corner_radius=20)
         self.app.main_container.pack(fill=tk.BOTH, expand=True, padx=50, pady=50)
+        UserModel.create_table()
+        InstrumentInfoModel.create_table()
 
         self.spinner_label = customtkinter.CTkProgressBar(
             master=self.app.main_container,
